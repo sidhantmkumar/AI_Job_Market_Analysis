@@ -1,14 +1,14 @@
-🧠 AI Job Market Analysis
+## 🧠 AI Job Market Analysis
 
 A complete end-to-end data analytics project analyzing global AI job trends, salary insights, and skill demand using Python, SQL, Power BI, and Excel.
 This project combines data cleaning, database management, visualization, and predictive analytics — giving a full picture of the AI job market landscape.
 
-🎯 Project Overview
+## 🎯 Project Overview
 
 The AI Job Market Analysis project explores how salaries, job titles, and skills vary across industries and countries within the AI domain.
 It includes data cleaning, database design, visualization, and trend analysis to uncover valuable hiring and salary patterns.
 
-🚀 Objective
+## 🚀 Objective
 
 To analyze and visualize the AI job market by identifying:
 
@@ -20,60 +20,58 @@ Correlation between job titles and salary levels
 
 Insights into in-demand AI skills and tools
 
-🛠️ Tools & Technologies
-Category	Tools Used
-Data Cleaning & Preprocessing	Microsoft Excel, Python (Pandas, NumPy)
-Database Management	SQLite, SQL Queries
-Visualization & Reporting	Power BI
-Analytics & Modeling	Python (Matplotlib, Seaborn, Scikit-learn - Linear Regression)
-🧩 Methodology
-Day 1 – Data Collection
+ 🛠️ Tools & Technologies
 
-Collected two raw Excel files: ai_job_dataset.xlsx and jobdatasetproseed.xlsx.
+**Data & Cleaning**
+- Excel / Google Sheets — manual fixes, header standardization, quick transformations  
+- Python (pandas, numpy, openpyxl) — automated cleaning and CSV export
 
-Contained job titles, locations, company details, and salary information.
+**Storage & Database**
+- SQLite — schema design, ER diagrams, joins, queries  
+- SQL — data validation, aggregation and preparation for BI
 
-Day 2 – Data Cleaning
+**Analysis & Modeling**
+- Python (matplotlib, seaborn) — exploratory data analysis, charts  
+- scikit-learn — baseline linear regression model (RMSE, R²)
 
-Cleaned both Excel sheets by removing duplicates, nulls, and inconsistent text.
+**Visualization & Reporting**
+- Power BI — interactive dashboards, KPI cards, maps and slicers  
+- PDF/PNG exports — high-quality screenshots for portfolio
 
-Standardized columns and exported as CSV files:
+**Collaboration & Delivery**
+- Git / GitHub — version control and repo hosting  
+- Google Colab — reproducible notebook execution (optional/cloud)
 
-ai_job_dataset.csv
+---
 
-jobs_market.csv
+## 🧩 Methodology (Day-by-day summary)
 
-Day 3 – SQL Database Integration
+**Day 1 — Data collection & initial audit**
+- Collected two raw files: `ai_job_dataset` (job/skill text) and `jobdatasetproseed` (market & salary data).  
+- Performed schema inspection, identified missing values, and documented problematic columns (commas in text, inconsistent headers).
 
-Imported both CSVs into SQLite.
+**Day 2 — Cleaning & standardization**
+- Standardized column headers (snake_case), removed exact duplicates, and fixed CSV quoting issues for comma-containing text.  
+- Exported cleaned CSVs: `ai_job_dataset.csv` and `jobs_market.csv`.
 
-Designed ER Diagrams for better understanding of relationships.
+**Day 3 — Database design & joining**
+- Imported cleaned CSVs into **SQLite**, designed ER diagrams and primary/foreign keys.  
+- Wrote and tested SQL joins to create the consolidated table `job_analysis`. Exported final CSV for analytics.
 
-Used SQL joins and queries to merge datasets and create a new combined table job_analysis.
+**Day 4 — Power BI dashboard development**
+- Built a 4-page Power BI report (Overview, Salary & Experience, Salary & Job Titles, Detailed Table).  
+- Implemented KPIs, map visualizations, Top-N charts, slicers, and responsive formatting; exported PBIX and report PDF/screenshots.
 
-Exported the final merged data as job_analysis.csv.
+**Day 5 — Exploratory analysis in Python**
+- Ran EDA: distributions, top skills extraction, remote-bucket analysis, and correlations between salary and features.  
+- Saved plots and CSV summaries for inclusion in the report.
 
-Day 4 – Power BI Visualization
+**Day 6 — Baseline modeling & validation**
+- Created feature set (remote_ratio buckets, skill counts, categorical encodings), trained a baseline linear regression.  
+- Evaluated model (RMSE, R²), saved sample predictions and discussion notes for model limitations and next steps.
 
-Built a 4-page interactive Power BI Dashboard:
+---
 
-Overview: Snapshot of AI job market metrics and KPIs.
-
-Salary & Experience: Salary distribution by role and seniority.
-
-Job Titles: Top-paying and most in-demand AI roles.
-
-Detailed Table: Filterable, detailed data view for deeper insights.
-Exported as .pbix, .pdf, and .pbit (template) files.
-
-Day 5 & 6 – Python Analysis & Predictive Modeling
-
-Performed advanced EDA (Exploratory Data Analysis) using Pandas & Seaborn.
-
-Built visualizations: histograms, bar plots, box plots to analyze salary trends.
-
-Implemented Linear Regression to find correlation between salary and other numerical attributes.
-Database & Data Handling Notes
 
 Due to GitHub’s 25 MB file size limit, the original SQLite database is not included directly in this repository.
 However, you can easily recreate the same database using the two cleaned CSV files or by extracting job_analysis.zip.
@@ -107,43 +105,52 @@ conn.close()
 
 Once executed, you’ll get a database identical to the one used in Power BI and Python.
 
-📈 Key Insights
+## 📈 Key Insights
 
-Top-paying AI roles are concentrated in Machine Learning and Data Science.
+- **Top-paying roles** are concentrated in *Machine Learning*, *Data Science*, and *AI Engineering*.  
+- **Salary** shows strong correlation with both *job title* and *company location*.  
+- **Interactive dashboards** in Power BI reveal *global salary variations* and *emerging AI job trends*.  
+- **Linear Regression modeling** confirms measurable relationships between *experience level*, *remote ratio*, and *compensation*.  
+- The project demonstrates a full data pipeline — from raw data cleaning to predictive modeling and visualization.
 
-Salaries show strong correlation with job title and country.
+---
 
-Visualization dashboards highlight global salary differences and emerging AI job trends.
+## 🧰 How to Run
 
-Linear regression indicates measurable relationships between job-related factors and pay.
-Calculated RMSE and R² for model performance evaluation.
-
-Notebook saved as .ipynb with supporting CSV and screenshots.
-🧰 How to Run
-
-Clone this repository:
-
-git clone https://github.com/<your-username>/AI_Job_Market_Analysis.git
-
-
-Install required Python libraries:
+1. **Clone this repository:**
+   ```bash
+   git clone https://github.com/<your-username>/AI_Job_Market_Analysis.git
+   Install required Python libraries:
 
 pip install pandas numpy matplotlib seaborn scikit-learn
 
 
-Open the .ipynb notebook in Google Colab or Jupyter Notebook.
+## Open the notebook:
 
-For dashboard viewing, open the .pbix file in Microsoft Power BI Desktop.
+Launch AI_Job_Market_Analysis.ipynb in Google Colab (recommended) or Jupyter Notebook.
 
-🧾 License
+## View dashboards:
+
+Open AI_Job_Market.pbix in Power BI Desktop to explore interactive visuals.
+
+(Optional) If you want to rebuild the SQLite database:
+
+Extract both CSVs from data/cleaned/
+
+Import into SQLite and recreate job_analysis using the join query provided in the SQL folder.
+
+
+## 🧾 License
 
 This project is licensed under the MIT License — feel free to use and modify it for educational or personal purposes.
 
-👨‍💻 Author
+## 👨‍💻 Author
 
 Sidhant Kumar
+
 Data Analytics | Machine Learning | Power BI Enthusiast
+
 [GitHub](https://github.com/sidhantmkumar) | [LinkedIn](https://in.linkedin.com/in/sidhant-k-1315ba289)
 
-✅ Short Summary:
+## ✅ Short Summary:
 A complete AI Job Market Analysis project covering end-to-end data workflows — from cleaning and SQL integration to Power BI dashboards and Python-based analysis.
