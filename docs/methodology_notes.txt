@@ -1,0 +1,75 @@
+Methodology Notes – AI Job Market Analysis
+
+Day 1 – Raw Data Understanding
+
+Imported two datasets: ai_job_dataset.xlsx and jobdatasetproseed.xlsx.
+
+Performed column inspection and identified mismatched schemas.
+
+Documented data types, missing values, and duplicate entries.
+
+Day 2 – Data Cleaning & Transformation
+
+Removed duplicates and nulls using Excel and Python.
+
+Standardized column names (snake_case).
+
+Replaced “NA” placeholders and handled inconsistent experience text.
+
+Saved cleaned datasets as CSV: ai_job_dataset_cleaned.csv, jobs_market.csv.
+
+Day 3 – Database Creation
+
+Imported both cleaned files into SQLite.
+
+Defined primary and foreign keys, joined datasets into a master table job_analysis.
+
+Validated relationships using ER diagrams.
+
+Exported combined table and ran queries for salary insights, remote ratios, etc.
+
+Captured SQL query screenshots for documentation.
+
+Day 4 – Power BI Dashboard Development
+
+Imported job_analysis.csv into Power BI.
+
+Built 4-page report:
+
+Overview – KPIs and salary insights.
+
+Company & Remote Trends – Remote vs. on-site analysis.
+
+Industry & Role Analysis – Avg salary by role/industry.
+
+Detailed Table View – Clean tabular reference with slicers.
+
+Added visual theme, slicers, filters, and background for clarity.
+
+Day 5 – Data Analysis with Python
+
+Used Pandas for descriptive statistics and outlier detection.
+
+Created visualizations: salary histograms, job role bar charts, and remote ratio distributions.
+
+Exported results and screenshots for inclusion in analysis outputs.
+
+Day 6 – Regression & Model Evaluation
+
+Implemented Linear Regression to estimate salary trends based on features.
+
+Computed RMSE and R² scores to validate model accuracy.
+
+Saved notebook (Advance_Job_Analysis_using_Python.ipynb) and outputs for reproducibility.
+
+Deliverables:
+
+Cleaned CSV files
+
+SQLite database with joins
+
+Power BI Dashboard (.pbix and PDF)
+
+Python Analysis Notebook (.ipynb)
+
+Screenshots and visual summaries
